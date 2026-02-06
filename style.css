@@ -551,3 +551,31 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===============================
+   BIOGRAPHY PAGE STYLES
+   (uses SAME style.css file)
+================================ */
+
+/* Left Panel */
+.profile-panel {
+  background-color: #d0e8f2; 
+  color: #111; 
+}
+
+/* Right Panel */
+.content-panel {
+  background-color: #d0e8f2; 
+  color: #111;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC");
+  background-repeat: repeat;
+  background-size: 40px 40px;
+  animation: panel-bg-scroll 10s linear infinite;
+}
+
+/* Animation keyframes for right panel */
+@keyframes panel-bg-scroll {
+  from { background-position: 0 0; }
+  to { background-position: 40px 40px; }
+}
+
