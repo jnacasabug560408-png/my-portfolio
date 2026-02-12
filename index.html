@@ -12,47 +12,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    /* Blue Theme Overrides */
-    :root {
-      --primary-blue: #0d6efd;
-      --dark-blue: #0a58ca;
-      --light-blue: #e7f1ff;
-    }
-    
-    #home {
-      /* Removed black background, replaced with a subtle blue gradient */
-      background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
-    }
-
-    .section-title {
-      color: var(--dark-blue);
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background-color: var(--primary-blue);
-    }
-
-    .skill-card:hover {
-      border-color: var(--primary-blue) !important;
-      transform: translateY(-5px);
-      transition: 0.3s;
-    }
-
-    .footer {
-      background-color: #051b35 !important;
-    }
-  </style>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -60,7 +19,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#"><i class="bi bi-code-slash text-primary me-2"></i>JILLIAN</a>
+    <a class="navbar-brand fw-bold" href="#">JILLIAN</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -80,78 +39,89 @@
 
 <section id="home">
   <div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center text-center">
-    <div class="mb-4 text-primary">
-        <i class="bi bi-laptop display-1"></i>
-    </div>
+    <h1 class="type name">Hi, I'm Jill</h1>
     
-    <h1 class="name fw-bold display-2 text-dark">Hi, I'm <span class="text-primary">Jill</span></h1>
+    <h2 class="type role mt-3">IT Student • Beginner & Future Web Developer</h2>
     
-    <h2 class="role mt-3 text-secondary fw-light">IT Student • Beginner & Future Web Developer</h2>
-    
-    <div class="container mt-3" style="max-width: 600px;">
-        <h3 class="tagline fst-italic text-muted px-3">“Every expert was once a beginner who chose to keep learning.”</h3>
-    </div>
+    <h3 class="type tagline mt-3">“Every expert was once a beginner who chose to keep learning.”</h3>
 
-    <a href="#projects" class="btn btn-primary btn-lg mt-5 px-5 shadow rounded-pill">View My Work</a>
+    <a href="#projects" class="btn btn-dark btn-lg mt-4 shadow-sm">View Projects</a>
   </div>
 </section>
 
-<section id="about" class="py-5 bg-light">
+<section id="about" class="py-5">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-5 mb-4 text-center">
-        <div class="bg-white p-5 rounded shadow-sm border border-primary border-opacity-25">
-            <i class="bi bi-person-workspace display-1 text-primary"></i>
-        </div>
+        <img src="image1.jpg" class="img-fluid rounded shadow" alt="Profile">
       </div>
       <div class="col-lg-7">
-        <h2 class="section-title text-start">About Me</h2>
-
-        <p class="mt-4">
+        <h2 class="fw-bold">About Me</h2>
+        <p class="text-muted">
           I am an IT student currently in my second year taking up a Bachelor of Information Technology
           at the University of Mindanao. I am interested in technology, especially web development and web design.
         </p>
-
         <p>
           I started by creating simple web pages using HTML, and I am slowly learning how to use CSS.
-          I enjoy learning the architecture behind how websites work.
+          I am still a beginner, but I enjoy learning how websites work.
         </p>
-
-        <a href="biography.html" target="_blank" class="btn btn-outline-primary mt-3">Read Biography</a>
+        <p>
+          When I am not coding, I enjoy creative activities such as video editing and researching design ideas.
+          I believe a good website should be both visually appealing and easy to use.
+        </p>
+        <p>
+          My goal is to finish my degree and work in the technology field,
+          especially in web development, where I can continue learning and improving.
+        </p>
+        <a href="biography.html" target="_blank" class="btn btn-primary">Read More</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="skills py-5" id="skills">
+<section class="skills" id="skills">
   <div class="container">
-    <h2 class="section-title text-center">My Skills</h2>
-    <p class="text-center text-muted mb-5">Technical tools I'm building proficiency in</p>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="skill-card p-4 shadow-sm border rounded text-center bg-white">
-          <i class="fab fa-html5 fa-3x text-primary mb-3"></i>
-          <h4 class="fw-bold">HTML5</h4>
-          <div class="progress mt-3" style="height: 8px;">
-            <div class="progress-bar" style="width: 70%"></div>
+    <h2 class="section-title">My Skills</h2>
+    <p class="section-subtitle">Technologies and tools I'm proficient with</p>
+    <div class="skills-row">
+      <div class="skill-card">
+        <div class="skill-icon html-icon">
+          <i class="fab fa-html5"></i>
+        </div>
+        <h3>HTML</h3>
+        <p>Developing semantic, accessible, and well-structured Web pages with HTML</p>
+        <div class="skill-level">
+          <span>Proficiency: 70%</span>
+          <div class="level-bar">
+            <div class="level-fill html-fill"></div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="skill-card p-4 shadow-sm border rounded text-center bg-white">
-          <i class="fab fa-css3-alt fa-3x text-primary mb-3"></i>
-          <h4 class="fw-bold">CSS3</h4>
-          <div class="progress mt-3" style="height: 8px;">
-            <div class="progress-bar" style="width: 70%"></div>
+
+      <div class="skill-card">
+        <div class="skill-icon css-icon">
+          <i class="fab fa-css3-alt"></i>
+        </div>
+        <h3>CSS</h3>
+        <p>Style Responsive layouts using CSS, Flexbox, Grid and the modern design concepts.</p>
+        <div class="skill-level">
+          <span>Proficiency: 70%</span>
+          <div class="level-bar">
+            <div class="level-fill css-fill"></div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="skill-card p-4 shadow-sm border rounded text-center bg-white">
-          <i class="fab fa-java fa-3x text-primary mb-3"></i>
-          <h4 class="fw-bold">Java</h4>
-          <div class="progress mt-3" style="height: 8px;">
-            <div class="progress-bar" style="width: 50%"></div>
+
+      <div class="skill-card">
+        <div class="skill-icon java-icon">
+          <i class="fab fa-java"></i>
+        </div>
+        <h3>Java</h3>
+        <p>Java is a programming language that is based on the concept of object-oriented programming.</p>
+        <div class="skill-level">
+          <span>Proficiency: 50%</span>
+          <div class="level-bar">
+            <div class="level-fill java-fill"></div>
           </div>
         </div>
       </div>
@@ -159,27 +129,43 @@
   </div>
 </section>
 
-<section class="projects py-5 bg-light" id="projects">
+<section class="projects" id="projects">
   <div class="container">
-    <h2 class="section-title text-center">Projects & Achievements</h2>
-    <div class="row g-4 mt-4">
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-body p-4">
-            <div class="text-primary mb-2"><i class="bi bi-folder-fill fs-3"></i></div>
-            <h5 class="card-title fw-bold">HTML Practice Collection</h5>
-            <p class="card-text text-muted">A series of activities mastering semantic structure, accessible tables, and interactive forms.</p>
-            <span class="badge bg-primary-subtle text-primary">Web Development</span>
+    <h2 class="section-title">My Projects and Achievements</h2>
+    <p class="section-subtitle">School works and practice activities I've completed</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image project-2">
+          <div class="project-overlay">
+            <h3>HTML Exercises</h3>
+            <p>Web Development Practice</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>HTML Practice Projects Collection</h3>
+          <p>These activities indicate that I have mastered the correct formatting and standards of accessibility in HTML.</p>
+          <div class="project-tech">
+            <span><i class="fab fa-html5"></i> HTML5</span>
+            <span><i class="fas fa-table"></i> Tables</span>
+            <span><i class="fas fa-edit"></i> Forms</span>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-body p-4">
-            <div class="text-primary mb-2"><i class="bi bi-cpu-fill fs-3"></i></div>
-            <h5 class="card-title fw-bold">Java Programming Apps</h5>
-            <p class="card-text text-muted">Logical programming applications utilizing Object-Oriented principles and problem-solving.</p>
-            <span class="badge bg-primary-subtle text-primary">Software Logic</span>
+
+      <div class="project-card">
+        <div class="project-image project-3">
+          <div class="project-overlay">
+            <h3>Java Activities</h3>
+            <p>Programming Projects</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Java Programming Applications</h3>
+          <p>The projects demonstrate object-oriented skills of programming and problem solving skills.</p>
+          <div class="project-tech">
+            <span><i class="fab fa-java"></i> Java</span>
+            <span><i class="fas fa-object-group"></i> OOP</span>
+            <span><i class="fas fa-calculator"></i> Applications</span>
           </div>
         </div>
       </div>
@@ -187,46 +173,61 @@
   </div>
 </section>
 
-<section class="contact py-5" id="contact">
-  <div class="container text-center">
-    <h2 class="section-title text-center mb-5">Get In Touch</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="p-3">
-            <i class="bi bi-envelope-at text-primary fs-1"></i>
-            <h5 class="mt-3 fw-bold">Email</h5>
-            <p>jillian@gmail.com</p>
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Contact Information</h2>
+    <p class="section-subtitle text-center mb-5">Feel free to reach out to me</p>
+
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div class="contact-details">
+          <h3>Email</h3>
+          <p>jillian@gmail.com</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="p-3">
-            <i class="bi bi-geo-alt text-primary fs-1"></i>
-            <h5 class="mt-3 fw-bold">Location</h5>
-            <p>Bankerohan, Davao City</p>
+
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="contact-details">
+          <h3>Location</h3>
+          <p>Bankerohan, Davao City</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="p-3">
-            <i class="bi bi-mortarboard text-primary fs-1"></i>
-            <h5 class="mt-3 fw-bold">School</h5>
-            <p>University of Mindanao</p>
+
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fas fa-school"></i></div>
+        <div class="contact-details">
+          <h3>School</h3>
+          <p>University of Mindanao</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fas fa-book"></i></div>
+        <div class="contact-details">
+          <h3>Course</h3>
+          <p>BS Information Technology – 2nd Year</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer text-white py-5 mt-auto">
-  <div class="container text-center">
-    <h3 class="fw-bold">Jillian Grace C. Nacasabug</h3>
-    <p class="opacity-75">IT Student & Future Web Developer</p>
-    <div class="mt-4">
-      <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-facebook"></i></a>
-      <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-github"></i></a>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Jillian Grace C. Nacasabug</h2>
+        <p>IT Student & Future Web Developer</p>
+      </div>
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-github"></i> GitHub</a>
+      </div>
     </div>
-    <hr class="my-4 opacity-25">
-    <p class="small opacity-50">&copy; 2026 Jillian. All Rights Reserved.</p>
+    <p class="footer-bottom">&copy; 2026 Jillian. All Rights Reserved.</p>
   </div>
 </footer>
 
